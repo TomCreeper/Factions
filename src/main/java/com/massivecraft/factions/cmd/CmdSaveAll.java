@@ -13,8 +13,8 @@ public class CmdSaveAll extends FCommand {
         this.aliases.add("saveall");
         this.aliases.add("save");
 
-        //this.requiredArgs.add("");
-        //this.optionalArgs.put("", "");
+        this.requiredArgs.add("");
+        this.optionalArgs.put("", "");
 
         this.permission = Permission.SAVE.node;
         this.disableOnLock = false;
