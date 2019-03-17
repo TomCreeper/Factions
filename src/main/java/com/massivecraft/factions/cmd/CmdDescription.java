@@ -12,8 +12,8 @@ public class CmdDescription extends FCommand {
         this.aliases.add("desc");
 
         this.requiredArgs.add("desc");
-        this.errorOnToManyArgs = false;
-        //this.optionalArgs
+        this.errorOnToManyArgs = true;
+        this.optionalArgs
 
         this.permission = Permission.DESCRIPTION.node;
         this.disableOnLock = true;
@@ -21,7 +21,7 @@ public class CmdDescription extends FCommand {
         senderMustBePlayer = true;
         senderMustBeMember = false;
         senderMustBeOfficer = true;
-        senderMustBeLeader = false;
+        senderMustBeLeader = true;
     }
 
     @Override
