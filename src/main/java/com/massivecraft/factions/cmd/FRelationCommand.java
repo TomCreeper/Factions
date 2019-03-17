@@ -15,7 +15,7 @@ public abstract class FRelationCommand extends FCommand {
     public FRelationCommand() {
         super();
         this.requiredArgs.add("faction");
-        //this.optionalArgs.put("", "");
+        this.optionalArgs.put("", "");
 
         this.permission = Permission.RELATION.node;
         this.disableOnLock = true;
@@ -31,11 +31,11 @@ public abstract class FRelationCommand extends FCommand {
         Faction them = this.argAsFaction(0);
         if (them == null) return;
 
-		/*if ( ! them.isNormal())
+		 ( ! them.isNormal())
         {
 			msg("<b>Nope! You can't.");
 			return;
-		}*/
+		}
 
         if (them == myFaction) {
             msg("<b>Nope! You can't declare a relation to yourself :)");
