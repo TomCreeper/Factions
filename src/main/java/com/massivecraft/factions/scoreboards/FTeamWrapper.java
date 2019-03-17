@@ -64,7 +64,7 @@ public class FTeamWrapper {
                 continue;
             }
 
-            // Scoreboard might not have player; add him/her
+            // Scoreboard might not have player; add him/her or it
             wrapper.addPlayer(fmember.getPlayer());
         }
 
