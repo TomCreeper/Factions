@@ -284,7 +284,7 @@ public class Conf {
     // -------------------------------------------- //
 
     // Should the dynmap intagration be used?
-    public static boolean dynmapUse = false;
+    public static boolean dynmapUse = true;
 
     // Name of the Factions layer
     public static String dynmapLayerName = "Factions";
@@ -305,7 +305,7 @@ public class Conf {
                     + "<span style=\"font-style: italic; font-size: 110%;\">%description%</span><br>"
                     + "<br>\n"
                     + "<span style=\"font-weight: bold;\">Leader:</span> %players.leader%<br>\n"
-                    + "<span style=\"font-weight: bold;\">Admins:</span> %players.admins.count%<br>\n"
+                    + "<span style=\"font-weight: bold;\">Administrators:</span> %players.admins.count%<br>\n"
                     + "<span style=\"font-weight: bold;\">Moderators:</span> %players.moderators.count%<br>\n"
                     + "<span style=\"font-weight: bold;\">Members:</span> %players.normals.count%<br>\n"
                     + "<span style=\"font-weight: bold;\">TOTAL:</span> %players.count%<br>\n"
@@ -315,7 +315,7 @@ public class Conf {
                     + "</div>";
 
     // Enable the %money% macro. Only do this if you know your economy manager is thread-safe.
-    public static boolean dynmapDescriptionMoney = false;
+    public static boolean dynmapDescriptionMoney = true;
 
     // Allow players in faction to see one another on Dynmap (only relevant if Dynmap has 'player-info-protected' enabled)
     public static boolean dynmapVisibilityByFaction = true;
