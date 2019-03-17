@@ -11,7 +11,7 @@ public class CmdFlag extends FCommand {
         super();
         this.aliases.add("flag");
 
-        //this.requiredArgs.add("");
+        this.requiredArgs.add("");
         this.optionalArgs.put("faction", "your");
         this.optionalArgs.put("flag", "all");
         this.optionalArgs.put("yes/no", "read");
