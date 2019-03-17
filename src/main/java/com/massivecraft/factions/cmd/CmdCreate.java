@@ -15,7 +15,7 @@ public class CmdCreate extends FCommand {
         this.aliases.add("create");
 
         this.requiredArgs.add("faction tag");
-        //this.optionalArgs.put("", "");
+        this.optionalArgs.put("", "");
 
         this.permission = Permission.CREATE.node;
         this.disableOnLock = true;
