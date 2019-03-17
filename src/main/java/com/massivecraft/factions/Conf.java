@@ -21,7 +21,7 @@ public class Conf {
 
     public static ChatColor colorNoPVP = ChatColor.GOLD;
     public static ChatColor colorFriendlyFire = ChatColor.DARK_RED;
-    //public static ChatColor colorWilderness = ChatColor.DARK_GREEN;
+    public static ChatColor colorWilderness = ChatColor.DARK_GREEN;
 
     public static Map<FFlag, Boolean> factionFlagDefaults;
     public static Map<FFlag, Boolean> factionFlagIsChangeable;
@@ -58,9 +58,9 @@ public class Conf {
     // what faction ID to start new players in when they first join the server; default is 0, "no faction"
     public static String newPlayerStartingFactionID = "0";
 
-    //public static boolean showMapFactionKey = true;
-    //public static boolean showNeutralFactionsOnMap = true;
-    //public static boolean showEnemyFactionsOnMap = true;
+    public static boolean showMapFactionKey = true;
+    public static boolean showNeutralFactionsOnMap = true;
+    public static boolean showEnemyFactionsOnMap = true;
 
     // Disallow joining/leaving/kicking while power is negative
     public static boolean canLeaveWithNegativePower = true;
@@ -149,7 +149,7 @@ public class Conf {
 
     public static int noPVPDamageToOthersForXSecondsAfterLogin = 3;
 
-    //public static boolean peacefulMembersDisablePowerLoss = true;
+    public static boolean peacefulMembersDisablePowerLoss = true;
 
     public static boolean permanentFactionsDisableLeaderPromotion = false;
 
@@ -162,7 +162,7 @@ public class Conf {
     // if someone is doing a radius claim and the process fails to claim land this many times in a row, it will exit
     public static int radiusClaimFailureLimit = 9;
 
-    //public static double considerFactionsReallyOfflineAfterXMinutes = 0.0;
+    public static double considerFactionsReallyOfflineAfterXMinutes = 0.0;
 
     public static boolean protectOfflineFactionsFromExplosions = false;
     public static double offlineExplosionProtectionDelay = 2.0;
@@ -187,8 +187,8 @@ public class Conf {
     public final transient static Set<Material> materialsDoor = EnumSet.noneOf(Material.class);
     public final transient static Set<Material> materialsContainer = EnumSet.noneOf(Material.class);
 
-    //public static Set<Material> territoryProtectedMaterialsWhenOffline = EnumSet.noneOf(Material.class);
-    //public static Set<Material> territoryDenyUseageMaterialsWhenOffline = EnumSet.noneOf(Material.class);
+    public static Set<Material> territoryProtectedMaterialsWhenOffline = EnumSet.noneOf(Material.class);
+    public static Set<Material> territoryDenyUseageMaterialsWhenOffline = EnumSet.noneOf(Material.class);
 
     // TODO: Rename to monsterCreatureTypes
     public static transient Set<EntityType> monsters = EnumSet.noneOf(EntityType.class);
@@ -213,7 +213,7 @@ public class Conf {
     public static boolean spoutTerritoryAccessShow = true;  // show occasional territory access info as well ("access granted" or "access restricted" if relevant)
     public static boolean spoutTerritoryNoticeShow = true;  // show additional brief territory notice near center of screen, to be sure player notices transition
     public static int spoutTerritoryNoticeTop = 40;  // how far down the screen to place the additional notice
-    public static boolean spoutTerritoryNoticeShowDescription = false;  // whether to show the faction description in the notice, not just the faction tag
+    public static boolean spoutTerritoryNoticeShowDescription = true;  // whether to show the faction description in the notice, not just the faction tag
     public static float spoutTerritoryNoticeSize = 1.5f;  // text scale (size) for notice
     public static float spoutTerritoryNoticeLeaveAfterSeconds = 2.00f;  // how many seconds before the notice goes away
 
@@ -250,7 +250,7 @@ public class Conf {
 
     //Faction banks, to pay for land claiming and other costs instead of individuals paying for them
     public static boolean bankEnabled = true;
-    //public static boolean bankMembersCanWithdraw = false; //Have to be at least moderator to withdraw or pay money to another faction
+    public static boolean bankMembersCanWithdraw = false; //Have to be at least moderator to withdraw or pay money to another faction
     public static boolean bankFactionPaysCosts = true; //The faction pays for faction command costs, such as sethome
     public static boolean bankFactionPaysLandCosts = true; //The faction pays for land claiming costs.
 
@@ -261,7 +261,7 @@ public class Conf {
     public static Set<String> worldsNoPowerLoss = new LinkedHashSet<String>();
     public static Set<String> worldsIgnorePvP = new LinkedHashSet<String>();
     // TODO: A better solution Would be to have One wilderness faction per world.
-    //public static Set<String> worldsNoWildernessProtection = new LinkedHashSet<String>();
+    public static Set<String> worldsNoWildernessProtection = new LinkedHashSet<String>();
 
     public static transient int mapHeight = 8;
     public static transient int mapWidth = 39;
