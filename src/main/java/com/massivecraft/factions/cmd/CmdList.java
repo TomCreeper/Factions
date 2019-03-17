@@ -17,7 +17,7 @@ public class CmdList extends FCommand {
         this.aliases.add("list");
         this.aliases.add("ls");
 
-        //this.requiredArgs.add("");
+        this.requiredArgs.add("");
         this.optionalArgs.put("page", "1");
 
         this.permission = Permission.LIST.node;
@@ -38,8 +38,8 @@ public class CmdList extends FCommand {
 
         factionList.remove(Factions.i.getNone());
         // TODO: Add flag SECRET To factions instead.
-        //factionList.remove(Factions.i.getSafeZone());
-        //factionList.remove(Factions.i.getWarZone());
+        factionList.remove(Factions.i.getSafeZone());
+        factionList.remove(Factions.i.getWarZone());
 
         // Sort by total followers first
         Collections.sort(factionList, new Comparator<Faction>() {
