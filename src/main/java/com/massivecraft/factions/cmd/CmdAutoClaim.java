@@ -9,7 +9,7 @@ public class CmdAutoClaim extends FCommand {
         super();
         this.aliases.add("autoclaim");
 
-        //this.requiredArgs.add("");
+        this.requiredArgs.add("");
         this.optionalArgs.put("faction", "your");
 
         this.permission = Permission.AUTOCLAIM.node;
