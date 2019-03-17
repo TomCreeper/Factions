@@ -9,7 +9,7 @@ public class CmdReload extends FCommand {
         super();
         this.aliases.add("reload");
 
-        //this.requiredArgs.add("");
+        this.requiredArgs.add("");
         this.optionalArgs.put("file", "all");
 
         this.permission = Permission.RELOAD.node;
