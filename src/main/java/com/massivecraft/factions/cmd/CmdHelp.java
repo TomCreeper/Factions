@@ -16,7 +16,7 @@ public class CmdHelp extends FCommand {
         this.aliases.add("h");
         this.aliases.add("?");
 
-        //this.requiredArgs.add("");
+        this.requiredArgs.add("");
         this.optionalArgs.put("page", "1");
 
         this.permission = Permission.HELP.node;
@@ -56,7 +56,7 @@ public class CmdHelp extends FCommand {
         ArrayList<String> pageLines;
 
         pageLines = new ArrayList<String>();
-        //pageLines.add( p.cmdBase.cmdHelp.getUseageTemplate(true) );
+        pageLines.add( p.cmdBase.cmdHelp.getUseageTemplate(true) );
         pageLines.add(p.cmdBase.cmdList.getUseageTemplate(true));
         pageLines.add(p.cmdBase.cmdShow.getUseageTemplate(true));
         pageLines.add(p.cmdBase.cmdPower.getUseageTemplate(true));
@@ -109,7 +109,7 @@ public class CmdHelp extends FCommand {
         pageLines.add(p.cmdBase.cmdMap.getUseageTemplate(true));
         pageLines.add(p.cmdBase.cmdSeeChunks.getUseageTemplate(true));
         pageLines.add(p.txt.parse("<i>Claimed land with ownership set is further protected so"));
-        pageLines.add(p.txt.parse("<i>that only the owner(s), faction admin, and possibly the"));
+        pageLines.add(p.txt.parse("<i>that only the owner(s), faction administrator, and possibly the"));
         pageLines.add(p.txt.parse("<i>faction moderators have full access."));
         helpPages.add(pageLines);
 
@@ -151,16 +151,16 @@ public class CmdHelp extends FCommand {
         helpPages.add(pageLines);
 
         pageLines = new ArrayList<String>();
-        pageLines.add("Finally some commands for the server admins:");
+        pageLines.add("Finally some commands for the server administrators:");
         pageLines.add(p.cmdBase.cmdBypass.getUseageTemplate(true));
         pageLines.add(p.txt.parse("<c>/f claim safezone <i>claim land for the Safe Zone"));
         pageLines.add(p.txt.parse("<c>/f claim warzone <i>claim land for the War Zone"));
         pageLines.add(p.txt.parse("<c>/f autoclaim [safezone|warzone] <i>take a guess"));
-        pageLines.add(p.txt.parse("<i>Note: " + p.cmdBase.cmdUnclaim.getUseageTemplate(false) + P.p.txt.parse("<i>") + " works on safe/war zones as well."));
+        pageLines.add(p.txt.parse("<i>Note: " + p.cmdBase.cmdUnclaim.getUseageTemplate(true) + P.p.txt.parse("<i>") + " works on safe/war zones as well."));
         helpPages.add(pageLines);
 
         pageLines = new ArrayList<String>();
-        pageLines.add(p.txt.parse("<i>More commands for server admins:"));
+        pageLines.add(p.txt.parse("<i>More commands for server administrators:"));
         pageLines.add(p.cmdBase.cmdPowerBoost.getUseageTemplate(true));
         pageLines.add(p.cmdBase.cmdLock.getUseageTemplate(true));
         pageLines.add(p.cmdBase.cmdReload.getUseageTemplate(true));
