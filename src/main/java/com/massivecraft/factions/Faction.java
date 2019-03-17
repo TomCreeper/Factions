@@ -190,7 +190,7 @@ public class Faction extends Entity implements EconomyParticipator {
         return ret;
     }
 
-	/*
+	
     public void addPermittedRelation(FPerm perm, Rel rel)
 	{
 		Set<Rel> newPermittedRelations = EnumSet.noneOf(Rel.class);
@@ -205,7 +205,7 @@ public class Faction extends Entity implements EconomyParticipator {
 		newPermittedRelations.addAll(this.getPermittedRelations(perm));
 		newPermittedRelations.remove(rel);
 		this.setPermittedRelations(perm, newPermittedRelations);
-	}*/
+	}
 
     public void setRelationPermitted(FPerm perm, Rel rel, boolean permitted) {
         Set<Rel> newPermittedRelations = EnumSet.noneOf(Rel.class);
@@ -257,7 +257,7 @@ public class Faction extends Entity implements EconomyParticipator {
     // TODO: These should be gone after the refactoring...
 
     public boolean isNormal() {
-        //return ! (this.isNone() || this.isSafeZone() || this.isWarZone());
+        return ! (this.isNone() || this.isSafeZone() || this.isWarZone());
         return !this.isNone();
     }
 
@@ -266,7 +266,7 @@ public class Faction extends Entity implements EconomyParticipator {
     }
 
     // -------------------------------
-    // Relation and relation colors
+    // Relation and relation colours
     // -------------------------------
 
     @Override
@@ -428,7 +428,7 @@ public class Faction extends Entity implements EconomyParticipator {
     }
 
     public FPlayer getFPlayerLeader() {
-        //if ( ! this.isNormal()) return null;
+        if ( ! this.isNormal()) return null;
 
         for (FPlayer fplayer : fplayers) {
             if (fplayer.getRole() == Rel.LEADER) {
@@ -440,7 +440,7 @@ public class Faction extends Entity implements EconomyParticipator {
 
     public ArrayList<FPlayer> getFPlayersWhereRole(Rel role) {
         ArrayList<FPlayer> ret = new ArrayList<FPlayer>();
-        //if ( ! this.isNormal()) return ret;
+        if ( ! this.isNormal()) return ret;
 
         for (FPlayer fplayer : fplayers) {
             if (fplayer.getRole() == role) {
@@ -453,7 +453,7 @@ public class Faction extends Entity implements EconomyParticipator {
 
     public ArrayList<Player> getOnlinePlayers() {
         ArrayList<Player> ret = new ArrayList<Player>();
-        //if (this.isPlayerFreeType()) return ret;
+        if (this.isPlayerFreeType()) return ret;
 
         for (Player player : P.p.getServer().getOnlinePlayers()) {
             FPlayer fplayer = FPlayers.i.get(player);
