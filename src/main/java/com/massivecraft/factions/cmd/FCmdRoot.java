@@ -54,8 +54,8 @@ public class FCmdRoot extends FCommand {
         this.aliases.addAll(Conf.baseCommandAliases);
         this.aliases.removeAll(Collections.singletonList(null));  // remove any nulls from extra commas
 
-        //this.requiredArgs.add("");
-        //this.optionalArgs.put("","")
+        this.requiredArgs.add("");
+        this.optionalArgs.put("","")
 
         senderMustBePlayer = false;
         senderMustBeMember = false;
