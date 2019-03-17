@@ -14,8 +14,8 @@ public class CmdMoney extends FCommand {
         super();
         this.aliases.add("money");
 
-        //this.requiredArgs.add("");
-        //this.optionalArgs.put("","")
+        this.requiredArgs.add("");
+        this.optionalArgs.put("","")
 
         this.isMoneyCommand = true;
 
