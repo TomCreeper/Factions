@@ -213,7 +213,7 @@ public abstract class FactionsChannelAbstract implements Channel {
         Herochat.logChat(msg);
     }
 
-	/*@Override
+	@Override
     public void processChat(ChannelChatEvent event)
 	{
 		final Player player = event.getSender().getPlayer();
@@ -246,7 +246,7 @@ public abstract class FactionsChannelAbstract implements Channel {
 		
 		String formatWithoutColor = FactionsChatListener.parseTags(format, player, fplayer);
 		
-		//String msg = String.format(format, player.getDisplayName(), event.getMessage());
+		String msg = String.format(format, player.getDisplayName(), event.getMessage());
 		
 
 		for (Player recipient : recipients)
@@ -270,7 +270,7 @@ public abstract class FactionsChannelAbstract implements Channel {
 		}
 
 		Herochat.logChat(String.format(formatWithoutColor, player.getDisplayName(), event.getMessage()));
-	}*/
+	}
 
     public boolean isMessageHeard(Set<Player> recipients, Chatter sender) {
         if (!isLocal()) return true;
