@@ -33,7 +33,7 @@ public abstract class MCommand<T extends MPlugin> {
 
     // FIELD: Help Short
     // This field may be left blank and will in such case be loaded from the permissions node instead.
-    // Thus make sure the permissions node description is an action description like "eat hamburgers" or "do admin stuff".
+    // Thus make sure the permissions node description is an action description like "eat hamburgers" or "do administrator stuff".
     private String helpShort;
 
     public void setHelpShort(String val) {
