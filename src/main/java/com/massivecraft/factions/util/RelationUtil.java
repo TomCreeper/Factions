@@ -14,14 +14,14 @@ public class RelationUtil {
         String ret = "";
 
         if (that == null) {
-            return "A server admin";
+            return "A server administrator";
         }
 
         Faction thatFaction = getFaction(that);
         if (thatFaction == null) return "ERROR"; // ERROR
 
         Faction myFaction = getFaction(me);
-//		if (myFaction == null) return thatFaction.getTag(); // no relation, but can show basic name or tag
+		if (myFaction == null) return thatFaction.getTag(); // no relation, but can show basic name or tag
 
         if (that instanceof Faction) {
             if (me instanceof FPlayer && myFaction == thatFaction) {
@@ -74,10 +74,10 @@ public class RelationUtil {
         if (myFaction.equals(thatFaction)) {
             ret = Rel.MEMBER;
             // Do officer and leader check
-            //P.p.log("getRelationOfThatToMe the factions are the same for "+that.getClass().getSimpleName()+" and observer "+me.getClass().getSimpleName());
+            P.p.log("getRelationOfThatToMe the factions are the same for "+that.getClass().getSimpleName()+" and observer "+me.getClass().getSimpleName());
             if (that instanceof FPlayer) {
                 ret = ((FPlayer) that).getRole();
-                //P.p.log("getRelationOfThatToMe it was a player and role is "+ret);
+                P.p.log("getRelationOfThatToMe it was a player and role is "+ret);
             }
         } else if (!ignorePeaceful && (thatFaction.getFlag(FFlag.PEACEFUL) || myFaction.getFlag(FFlag.PEACEFUL))) {
             ret = Rel.TRUCE;
