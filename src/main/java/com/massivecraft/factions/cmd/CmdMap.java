@@ -11,7 +11,7 @@ public class CmdMap extends FCommand {
         super();
         this.aliases.add("map");
 
-        //this.requiredArgs.add("");
+        this.requiredArgs.add("");
         this.optionalArgs.put("on/off", "once");
 
         this.permission = Permission.MAP.node;
