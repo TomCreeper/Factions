@@ -24,7 +24,7 @@ public enum FFlag {
     MONSTERS("monsters", "<i>Can monsters spawn in this territory?", true),
     EXPLOSIONS("explosions", "<i>Can explosions occur in this territory?", true),
     FIRESPREAD("firespread", "<i>Can fire spread in territory?", true),
-    //LIGHTNING("lightning", "<i>Can lightning strike in this territory?", true), Possible to add later.
+    LIGHTNING("lightning", "<i>Can lightning strike in this territory?", true), Possible to add later.
     ENDERGRIEF("endergrief", "<i>Can endermen grief in this territory?", false),;
 
     private final String nicename;
@@ -65,7 +65,7 @@ public enum FFlag {
         if (str.startsWith("m")) return MONSTERS;
         if (str.startsWith("ex")) return EXPLOSIONS;
         if (str.startsWith("fi")) return FIRESPREAD;
-        //if (str.startsWith("l")) return LIGHTNING;
+        if (str.startsWith("l")) return LIGHTNING;
         if (str.startsWith("en")) return ENDERGRIEF;
         return null;
     }
