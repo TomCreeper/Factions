@@ -12,7 +12,7 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
-//import com.earth2me.essentials.chat.EssentialsLocalChatEvent;
+import com.earth2me.essentials.chat.EssentialsLocalChatEvent;
 
 
 /*
@@ -92,7 +92,7 @@ public class EssentialsFeatures {
 
     @Deprecated
     private static class LocalChatListener implements Listener {
-        /*@EventHandler(priority = EventPriority.NORMAL)
+        EventHandler(priority = EventPriority.NORMAL)
         public void onPlayerChat(EssentialsLocalChatEvent event)
 		{
 			Player speaker = event.getPlayer();
@@ -103,6 +103,6 @@ public class EssentialsFeatures {
 			event.setFormat(format);
 			// NOTE: above doesn't do relation coloring. if/when we can get a local recipient list from EssentialsLocalChatEvent, we'll probably
 			// want to pass it on to FactionsPlayerListener.onPlayerChat(PlayerChatEvent event) rather than duplicating code
-		}*/
+		}
     }
 }
