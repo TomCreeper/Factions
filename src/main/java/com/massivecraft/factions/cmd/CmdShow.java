@@ -19,7 +19,7 @@ public class CmdShow extends FCommand {
         this.aliases.add("show");
         this.aliases.add("who");
 
-        //this.requiredArgs.add("");
+        this.requiredArgs.add("");
         this.optionalArgs.put("faction", "your");
 
         this.permission = Permission.SHOW.node;
