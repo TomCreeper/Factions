@@ -107,7 +107,7 @@ public enum FPerm {
         return ret;
     }
 
-    // Perms which apply strictly to granting territory access
+    // Permissions which apply strictly to granting territory access
     private static final Set<FPerm> TerritoryPerms = EnumSet.of(BUILD, DOOR, BUTTON, LEVER, CONTAINER);
 
     public boolean isTerritoryPerm() {
