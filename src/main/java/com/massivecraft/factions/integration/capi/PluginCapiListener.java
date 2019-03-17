@@ -36,7 +36,7 @@ public class PluginCapiListener implements Listener {
         return format;
     }
 
-    /*@EventHandler(priority = EventPriority.NORMAL)
+    @EventHandler(priority = EventPriority.NORMAL)
     public void onListChannelsEvent(CAPIListChannelsEvent event)
     {
         for (Channel c : Channels.i.getAll())
@@ -95,5 +95,5 @@ public class PluginCapiListener implements Listener {
             event.setFailMessage(p.txt.parse("<b>You must be member in a faction to use this channel."));
             event.setCancelled(true);
         }
-    }*/
+    }
 }
